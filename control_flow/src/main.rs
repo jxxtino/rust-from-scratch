@@ -88,10 +88,12 @@ fn loops_label() {
     }
     println!("End count = {count}");
 
-    loops_while()
+    while_and_for()
 }
 
-fn loops_while(){
+fn while_and_for(){
+
+    // while loop
     let mut index: i32 = 3;
 
     while index != 0 {
@@ -101,4 +103,28 @@ fn loops_while(){
     }
 
     println!("loop out");
+
+    let array: [i32;5] = [1,2,3,4,5];
+    let mut index: usize = 0; // usize: used for represent positive values, ex: index, len
+    
+    while index != 5 {
+        println!("Value is {}", array[index]);
+
+        index += 1
+    }
+
+    println!("End");
+
+    // for loop
+
+    let names: [&str;2] = ["Matheus", "Eduarda"];
+
+    for name in names{
+        println!("Welcome: {name}")
+    }
+
+    for number in (1..4).rev(){ // rev() = reversed list
+        println!("{number}")
+    }
+
 }
